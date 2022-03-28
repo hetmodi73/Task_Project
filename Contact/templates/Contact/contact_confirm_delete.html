@@ -1,0 +1,48 @@
+{% block body %}
+    <h1 align="center"> Are you Sure You Want To Delete ?</h1>
+    <hr/>
+    <form method="post">
+    {% csrf_token %}
+
+         <div align="center">
+
+            <div class="col-md-6" align="left">
+
+            <div class="card card-primary card-outline" class="col-md-4">
+              <div class="card-body box-profile">
+
+                <ul class="list-group list-group-unbordered mb-3" >
+
+                    <li class="list-group-item">
+                    <b> NAME: </b> <a class="float-right">{{ object.NAME }}</a>
+                    </li>
+
+                     <li class="list-group-item">
+                     <b> EMAIL ID: </b> <a class="float-right">{{ object.EMAIL }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> NUMBER: </b> <a class="float-right">{{ object.NUMBER }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> MESSAGE: </b> <a class="float-right">{{ object.MESSAGE }}</a>
+                     </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+
+    </div>
+
+    </div>
+
+        <div align="center">
+            <input type="submit" value="Delete" class="btn btn-danger">
+            <a href="{% url 'contact-view' %}" class="btn btn-info" >cancel </a>
+        </div>
+
+    </form>
+{% endblock %}

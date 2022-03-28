@@ -1,0 +1,64 @@
+{% block body %}
+    <h1 align="center"> Are you Sure You Want To Delete ?</h1>
+    <hr/>
+    <form method="post">
+    {% csrf_token %}
+
+         <div align="center">
+
+            <div class="col-md-6" align="left">
+
+            <div class="card card-primary card-outline" class="col-md-4">
+              <div class="card-body box-profile">
+
+                <ul class="list-group list-group-unbordered mb-3" >
+
+                    <li class="list-group-item">
+                    <b> NAME: </b> <a class="float-right">{{ object.NAME }}</a>
+                    </li>
+
+                     <li class="list-group-item">
+                     <b> USERNAME: </b> <a class="float-right">{{ object.EMAIL_ID }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> PASSWORD: </b> <a class="float-right">{{ object.PASSWORD }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> CONTACT NUMBER: </b> <a class="float-right">{{ object.PHONE_NO }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> GENDER: </b> <a class="float-right">{{ object.GENDER }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> ADDRESS: </b> <a class="float-right">{{ object.ADDRESS }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> ROLE: </b> <a class="float-right">{{ object.ROLE }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> STATUS: </b> <a class="float-right">{{ object.STATUS }}</a>
+                     </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+
+    </div>
+
+    </div>
+
+        <div align="center">
+            <input type="submit" value="Delete" class="btn btn-danger">
+            <a href="{% url 'user-view' %}" class="btn btn-info" >cancel </a>
+        </div>
+
+    </form>
+{% endblock %}
