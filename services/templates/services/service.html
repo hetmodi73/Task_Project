@@ -1,5 +1,6 @@
 <!doctype html>
 {% load static %}
+{% load crispy_forms_field %}
 
 <html lang="en">
   <head>
@@ -140,6 +141,135 @@
 			</div>
 		</div>
 
+<!--  Section Services End -->
+ <!-- Section Cta Start -->
+<section class="section cta">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5">
+				<div class="cta-item  bg-white p-5 rounded">
+{#					<span class="h6 text-color">We create for you</span>#}
+{#					<h2 class="mt-2 mb-4">Entrust Your Project to Our Best Team of Professionals</h2>#}
+{#					<p class="lead mb-4">Have any project on mind? For immidiate support :</p>#}
+{#					<h3><i class="ti-mobile mr-3 text-color"></i>+23 876 65 455</h3>#}
+
+                    	<!-- service form start -->
+
+                        <section class="service-form-wrap section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+
+                                     <form id="service-form" class="service__form" method="post">
+                                         {% csrf_token %}
+
+                                     <!-- form message -->
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="alert alert-success service__msg" style="display: none" role="alert">
+                                                    Your message was sent successfully.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end message -->
+
+{#                                        <span class="text-color">Send a message</span>#}
+                                        <h3 class="text-md mb-4">Service Form</h3>
+                                        <div class="form-group">
+                                        <h6>SERVICE NAME</h6>
+                                         {% crispy_field form.SERVICE_NAME 'class' 'form-control'%}
+                                          {% if  form.SERVICE_NAME.errors %}
+                                              {% for error in form.SERVICE_NAME.errors %}
+                                                  <div class="invalid-feedback">
+                                                      {{ error }}
+                                                  </div>
+                                              {% endfor %}
+                                          {% endif %}
+{#                                            <input name="SERVICE_NAME" type="text" class="form-control" placeholder="Enter Your Service">#}
+                                        </div>
+
+                                        <button class="btn btn-main" name="submit" type="submit">Submit</button>
+
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                        </section>
+
+                        <!-- service form end -->
+
+{#                    	<!-- service_details form start -->#}
+{##}
+{#                        <section class="service_details-form-wrap section">#}
+{#                        <div class="container">#}
+{#                            <div class="row">#}
+{#                                <div class="col-lg-12 col-md-12 col-sm-12">#}
+{##}
+{#                                     <form id="service_details-form" class="service_details__form" method="post">#}
+{#                                         {% csrf_token %}#}
+{##}
+{#                                     <!-- form message -->#}
+{#                                        <div class="row">#}
+{#                                            <div class="col-12">#}
+{#                                                <div class="alert alert-success service_details__msg" style="display: none" role="alert">#}
+{#                                                    Your message was sent successfully.#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                        <!-- end message -->#}
+{##}
+{#                                        <span class="text-color">Send a message</span>#}
+{#                                        <h3 class="text-md mb-4">Service Detail Form</h3>#}
+{#                                        <div class="form-group">#}
+{#                                        <h6>SERVICE ID</h6>#}
+{#                                         {% crispy_field form.SERVICE_ID 'class' 'form-control'%}#}
+{#                                          {% if  form.SERVICE_ID.errors %}#}
+{#                                              {% for error in form.SERVICE_ID.errors %}#}
+{#                                                  <div class="invalid-feedback">#}
+{#                                                      {{ error }}#}
+{#                                                  </div>#}
+{#                                              {% endfor %}#}
+{#                                          {% endif %}#}
+{#                                            <input name="SERVICE_ID" type="text" class="form-control" placeholder="Enter Your Service Id">#}
+{#                                        </div>#}
+{##}
+{#                                        <div class="form-group">#}
+{#                                        <h6>SERVICE DETAIL NAME</h6>#}
+{#                                         {% crispy_field form.SERVICE_DETAIL_NAME 'class' 'form-control'%}#}
+{#                                          {% if  form.SERVICE_DETAIL_NAME.errors %}#}
+{#                                              {% for error in form.SERVICE_DETAIL_NAME.errors %}#}
+{#                                                  <div class="invalid-feedback">#}
+{#                                                      {{ error }}#}
+{#                                                  </div>#}
+{#                                              {% endfor %}#}
+{#                                          {% endif %}#}
+{#                                            <input name="SERVICE_DETAIL_NAME" type="text" class="form-control" placeholder="Enter Your Service Detail name">#}
+{#                                        </div>#}
+{##}
+{#                                        <button class="btn btn-main" name="submit" type="submit">Submit</button>#}
+{##}
+{#                                    </form>#}
+{##}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        </section>#}
+{##}
+{#                        <!-- service form end -->#}
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--  Section Cta End-->
+<!-- Section Testimonial Start -->
+
+
+
+
+
 		<div class="row justify-content-center">
 			<div class="col-lg-4 col-md-6 col-sm-6">
 				<div class="service-item mb-5">
@@ -216,6 +346,7 @@
 	</div>
 </section>
 <!--  Section Services End -->
+
 
 <section class="cta-2">
 	<div class="container">

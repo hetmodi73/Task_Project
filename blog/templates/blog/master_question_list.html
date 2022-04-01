@@ -95,46 +95,36 @@
 <!-- Header Close -->
 
               <div class="card-header">
-                  <h2 align="center"> USER DATA </h2>
+                  <h2 align="center"> SUB QUESTION DATA </h2>
               </div>
 
               <!-- /.card-header -->
                 <table id="example1" class="table table-bordered table-striped" id="example1">
                   <thead>
                   <tr>
-                      <th>NAME</th>
-                      <th>USERNAME</th>
-                      <th>PASSWORD</th>
-                      <th>CONTACT NUMBER</th>
-                      <th>GENDER</th>
-                      <th>ADDRESS</th>
-                      <th>ROLE</th>
-                      <th>STATUS</th>
-                      <th>Action</th>
+                      <th>QUESTION</th>
+                      <th>ANSWER</th>
+                      <th>POINTS</th>
+                      <th>SERVICES</th>
                   </tr>
                   </thead>
                     <tbody>
-                        {% for user in client %}
+                        {% for master_question in blog %}
                         <tr>
-                            <td>{{ user.NAME }}</td>
-                            <td>{{ user.EMAIL_ID }}</td>
-                            <td>{{ user.PASSWORD }}</td>
-                            <td>{{ user.PHONE_NO }}</td>
-                            <td>{{ user.GENDER }}</td>
-                            <td>{{ user.ADDRESS }}</td>
-                            <td>{{ user.ROLE }}</td>
-                            <td>{{ user.STATUS }}</td>
-
+                            <td>{{ master_question.QUESTION }}</td>
+                            <td>{{ master_question.ANSWER }}</td>
+                            <td>{{ master_question.POINTS }}</td>
+                            <td>{{ master_question.services }}</td>
                             <td>
-                                <a href="{% url 'user-update'  user.id %}" class="btn-info" >
+                                <a href="{% url 'master_question-update'  master_question.id %}" class="btn-info" >
                                     <i class="fas fa-pencil-alt"></i> Edit
                                 </a>
                                 &nbsp
-                                <a href="{% url 'user-detail'  user.id %}" class="btn-success">
+                                <a href="{% url 'master_question-detail'  master_question.id %}" class="btn-success">
                                     <i class="fas fa-file-invoice"></i> Detail
                                 </a>
                                 &nbsp
-                                <a href="{% url 'user-delete'  user.id %}" class="btn-danger">
+                                <a href="{% url 'master_question-delete'  master_question.id %}" class="btn-danger">
                                     <i class="fas fa-trash-alt"></i> Delete
                                 </a>
                             </td>

@@ -1,5 +1,6 @@
 <!doctype html>
 {% load static %}
+{% load crispy_forms_field %}
 
 <html lang="en">
   <head>
@@ -126,6 +127,117 @@
     </div>
   </div>
 </section>
+
+
+<br></br>
+<!--  Section Services End -->
+ <!-- Section Cta Start -->
+<section class="section cta">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5">
+				<div class="cta-item  bg-white p-5 rounded">
+{#					<span class="h6 text-color">We create for you</span>#}
+{#					<h2 class="mt-2 mb-4">Entrust Your Project to Our Best Team of Professionals</h2>#}
+{#					<p class="lead mb-4">Have any project on mind? For immidiate support :</p>#}
+{#					<h3><i class="ti-mobile mr-3 text-color"></i>+23 876 65 455</h3>#}
+
+                    	<!-- master_question form start -->
+
+                        <section class="master_question-form-wrap section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+
+                                     <form id="master_question-form" class="master_question__form" method="post">
+                                         {% csrf_token %}
+
+                                     <!-- form message -->
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="alert alert-success master_question__msg" style="display: none" role="alert">
+                                                    Your message was sent successfully.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end message -->
+
+                                        <h3 class="text-md mb-4">Master Question Form</h3>
+                                        <div class="form-group">
+
+                                        <h6>QUESTION</h6>
+                                         {% crispy_field form.QUESTION 'class' 'form-control'%}
+                                          {% if  form.QUESTION.errors %}
+                                              {% for error in form.QUESTION.errors %}
+                                                  <div class="invalid-feedback">
+                                                      {{ error }}
+                                                  </div>
+                                              {% endfor %}
+                                          {% endif %}
+{#                                            <input name="QUESTION" type="text" class="form-control" placeholder="Enter QUESTION">#}
+                                        </div>
+
+                                        <div class="form-group">
+                                        <h6>ANSWER</h6>
+                                         {% crispy_field form.ANSWER 'class' 'form-control'%}
+                                          {% if  form.ANSWER.errors %}
+                                              {% for error in form.ANSWER.errors %}
+                                                  <div class="invalid-feedback">
+                                                      {{ error }}
+                                                  </div>
+                                              {% endfor %}
+                                          {% endif %}
+{#                                            <input name="ANSWER" type="email" class="form-control" placeholder="Enter Your ANSWER">#}
+                                        </div>
+
+                                        <div class="form-group">
+                                        <h6>POINTS</h6>
+                                         {% crispy_field form.POINTS 'class' 'form-control'%}
+                                          {% if  form.POINTS.errors %}
+                                              {% for error in form.POINTS.errors %}
+                                                  <div class="invalid-feedback">
+                                                      {{ error }}
+                                                  </div>
+                                              {% endfor %}
+                                          {% endif %}
+{#                                            <input name="POINTS" type="email" class="form-control" placeholder="Enter Your POINTS">#}
+                                        </div>
+
+                                        <div class="form-group">
+                                        <h6>USER SERVICE</h6>
+                                         {% crispy_field form.services 'class' 'form-control'%}
+                                          {% if  form.services.errors %}
+                                              {% for error in form.services.errors %}
+                                                  <div class="invalid-feedback">
+                                                      {{ error }}
+                                                  </div>
+                                              {% endfor %}
+                                          {% endif %}
+{#                                            <input name="services" type="text" class="form-control" placeholder="Enter Your Service">#}
+                                        </div>
+                                        <div class="form-group">
+
+                                        <button class="btn btn-main" name="submit" type="submit">Submit</button>
+
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                        </section>
+
+                        <!-- master_question form end -->
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--  Section Cta End-->
+<!-- Section Testimonial Start -->
+
+
 
 <section class="section blog-wrap bg-gray">
     <div class="container">

@@ -95,46 +95,33 @@
 <!-- Header Close -->
 
               <div class="card-header">
-                  <h2 align="center"> USER DATA </h2>
+                  <h2 align="center"> SERVICE DETAILS DATA </h2>
               </div>
 
               <!-- /.card-header -->
                 <table id="example1" class="table table-bordered table-striped" id="example1">
                   <thead>
                   <tr>
-                      <th>NAME</th>
-                      <th>USERNAME</th>
-                      <th>PASSWORD</th>
-                      <th>CONTACT NUMBER</th>
-                      <th>GENDER</th>
-                      <th>ADDRESS</th>
-                      <th>ROLE</th>
-                      <th>STATUS</th>
+                      <th>SERVICE ID</th>
+                      <th>SERVICE DETAIL NAME</th>
                       <th>Action</th>
                   </tr>
                   </thead>
                     <tbody>
-                        {% for user in client %}
+                        {% for service_details in services %}
                         <tr>
-                            <td>{{ user.NAME }}</td>
-                            <td>{{ user.EMAIL_ID }}</td>
-                            <td>{{ user.PASSWORD }}</td>
-                            <td>{{ user.PHONE_NO }}</td>
-                            <td>{{ user.GENDER }}</td>
-                            <td>{{ user.ADDRESS }}</td>
-                            <td>{{ user.ROLE }}</td>
-                            <td>{{ user.STATUS }}</td>
-
+                            <td>{{ service_details.SERVICE_ID }}</td>
+                            <td>{{ service_details.SERVICE_DETAIL_NAME }}</td>
                             <td>
-                                <a href="{% url 'user-update'  user.id %}" class="btn-info" >
+                                <a href="{% url 'service_details-update'  service_details.id %}" class="btn-info" >
                                     <i class="fas fa-pencil-alt"></i> Edit
                                 </a>
                                 &nbsp
-                                <a href="{% url 'user-detail'  user.id %}" class="btn-success">
+                                <a href="{% url 'service_details-detail'  service_details.id %}" class="btn-success">
                                     <i class="fas fa-file-invoice"></i> Detail
                                 </a>
                                 &nbsp
-                                <a href="{% url 'user-delete'  user.id %}" class="btn-danger">
+                                <a href="{% url 'service_details-delete'  service_details.id %}" class="btn-danger">
                                     <i class="fas fa-trash-alt"></i> Delete
                                 </a>
                             </td>

@@ -1,5 +1,6 @@
 <!doctype html>
 {% load static %}
+{% load crispy_forms_field %}
 
 <html lang="en">
   <head>
@@ -106,9 +107,9 @@
 	</nav>
 </header>
 
-<!-- Header Close --> 
+<!-- Header Close -->
 
-<div class="main-wrapper ">
+<br class="main-wrapper ">
 <section class="page-title bg-1">
   <div class="container">
     <div class="row">
@@ -126,6 +127,115 @@
     </div>
   </div>
 </section>
+
+<br></br>
+<!--  Section Services End -->
+ <!-- Section Cta Start -->
+<section class="section cta">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5">
+				<div class="cta-item  bg-white p-5 rounded">
+{#					<span class="h6 text-color">We create for you</span>#}
+{#					<h2 class="mt-2 mb-4">Entrust Your Project to Our Best Team of Professionals</h2>#}
+{#					<p class="lead mb-4">Have any project on mind? For immidiate support :</p>#}
+{#					<h3><i class="ti-mobile mr-3 text-color"></i>+23 876 65 455</h3>#}
+
+                    	<!-- document form start -->
+
+                        <section class="document-form-wrap section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+
+                                     <form id="document-form" class="document__form" method="post">
+                                         {% csrf_token %}
+
+                                     <!-- form message -->
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="alert alert-success document__msg" style="display: none" role="alert">
+                                                    Your message was sent successfully.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end message -->
+
+{#                                        <span class="text-color">Send a message</span>#}
+                                        <h3 class="text-md mb-4">User Document Form</h3>
+                                        <div class="form-group">
+
+                                        <h6>USER</h6>
+                                         {% crispy_field form.client 'class' 'form-control'%}
+                                          {% if  form.client.errors %}
+                                              {% for error in form.client.errors %}
+                                                  <div class="invalid-feedback">
+                                                      {{ error }}
+                                                  </div>
+                                              {% endfor %}
+                                          {% endif %}
+{#                                            <input name="client" type="text" class="form-control" placeholder="Enter User">#}
+                                        </div>
+
+                                        <div class="form-group">
+                                        <h6>DOCUMENT NAME</h6>
+                                         {% crispy_field form.DOCUMENT_NAME 'class' 'form-control'%}
+                                          {% if  form.DOCUMENT_NAME.errors %}
+                                              {% for error in form.DOCUMENT_NAME.errors %}
+                                                  <div class="invalid-feedback">
+                                                      {{ error }}
+                                                  </div>
+                                              {% endfor %}
+                                          {% endif %}
+{#                                            <input name="DOCUMENT_NAME" type="email" class="form-control" placeholder="Enter Document Name">#}
+                                        </div>
+                                        <div class="form-group">
+
+                                        <h6>DOCUMENT FILE</h6>
+                                          {% crispy_field form.DOCUMENT_FILE %}
+                                          {% if  form.DOCUMENT_FILE.errors %}
+                                              {% for error in form.DOCUMENT_FILE.errors %}
+                                                  <div class="invalid-feedback">
+                                                      {{ error }}
+                                                  </div>
+                                              {% endfor %}
+                                          {% endif %}
+{#                                            <input name="DOCUMENT_FILE" type="password" class="form-control" placeholder="Enter Your DOCUMENT FILE">#}
+                                        </div>
+
+                                        <div class="form-group">
+                                        <h6>USER SERVICE</h6>
+                                         {% crispy_field form.services 'class' 'form-control'%}
+                                          {% if  form.services.errors %}
+                                              {% for error in form.services.errors %}
+                                                  <div class="invalid-feedback">
+                                                      {{ error }}
+                                                  </div>
+                                              {% endfor %}
+                                          {% endif %}
+{#                                            <input name="services" type="text" class="form-control" placeholder="Enter Your Service">#}
+                                        </div>
+                                        <div class="form-group">
+
+                                        <button class="btn btn-main" name="submit" type="submit">Submit</button>
+
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                        </section>
+
+                        <!-- document form end -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--  Section Cta End-->
+<!-- Section Testimonial Start -->
+
 
 <section class="section blog-wrap bg-gray">
     <div class="container">

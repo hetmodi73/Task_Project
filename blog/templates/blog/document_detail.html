@@ -1,5 +1,5 @@
 {% load static %}
-{% block extra_css %}
+{% block css %}
 
       <!-- bootstrap.min css -->
       <link rel="stylesheet" href="{% static 'plugins/bootstrap/css/bootstrap.min.css' %}">
@@ -13,13 +13,6 @@
 
       <!-- Main Stylesheet -->
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/searchbuilder/1.1.0/css/searchBuilder.dataTables.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/datetime/1.1.0/css/dataTables.dateTime.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/colreorder/1.5.4/css/colReorder.dataTables.min.css">
 
 {% endblock %}
 
@@ -94,57 +87,50 @@
 
 <!-- Header Close -->
 
-              <div class="card-header">
-                  <h2 align="center"> USER DATA </h2>
+    <br></br>
+    <h1 align="center"> DOCUMENT DETAIL </h1>
+    <hr/>
+
+    <form method="post">
+        {% csrf_token %}
+
+         <div align="center">
+            <div class="col-md-6" align="left">
+            <div class="card card-primary card-outline" class="col-md-4">
+              <div class="card-body box-profile">
+
+                <ul class="list-group list-group-unbordered mb-3" >
+
+                    <li class="list-group-item">
+                    <b> USER: </b> <a class="float-right">{{ object.client }}</a>
+                    </li>
+
+                     <li class="list-group-item">
+                     <b> DOCUMENT NAME: </b> <a class="float-right">{{ object.DOCUMENT_NAME }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> DOCUMENT FILE: </b> <a class="float-right">{{ object.DOCUMENT_FILE }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> SERVICES: </b> <a class="float-right">{{ object.services }}</a>
+                     </li>
+
+                </ul>
+
               </div>
 
-              <!-- /.card-header -->
-                <table id="example1" class="table table-bordered table-striped" id="example1">
-                  <thead>
-                  <tr>
-                      <th>NAME</th>
-                      <th>USERNAME</th>
-                      <th>PASSWORD</th>
-                      <th>CONTACT NUMBER</th>
-                      <th>GENDER</th>
-                      <th>ADDRESS</th>
-                      <th>ROLE</th>
-                      <th>STATUS</th>
-                      <th>Action</th>
-                  </tr>
-                  </thead>
-                    <tbody>
-                        {% for user in client %}
-                        <tr>
-                            <td>{{ user.NAME }}</td>
-                            <td>{{ user.EMAIL_ID }}</td>
-                            <td>{{ user.PASSWORD }}</td>
-                            <td>{{ user.PHONE_NO }}</td>
-                            <td>{{ user.GENDER }}</td>
-                            <td>{{ user.ADDRESS }}</td>
-                            <td>{{ user.ROLE }}</td>
-                            <td>{{ user.STATUS }}</td>
+            </div>
 
-                            <td>
-                                <a href="{% url 'user-update'  user.id %}" class="btn-info" >
-                                    <i class="fas fa-pencil-alt"></i> Edit
-                                </a>
-                                &nbsp
-                                <a href="{% url 'user-detail'  user.id %}" class="btn-success">
-                                    <i class="fas fa-file-invoice"></i> Detail
-                                </a>
-                                &nbsp
-                                <a href="{% url 'user-delete'  user.id %}" class="btn-danger">
-                                    <i class="fas fa-trash-alt"></i> Delete
-                                </a>
-                            </td>
-                        </tr>
-                    {% endfor %}
+    </div>
+             <div align="center">
+                 <a href="{% url 'document-view' %}" class="btn btn-info"><b>Back</b></a>
+            </div>
 
-                  </tbody>
-                  <tfoot>
-                  </tfoot>
-                </table>
+    </div>
+
+    </form>
 
 <!-- footer Start -->
 <footer class="footer section">
@@ -218,11 +204,12 @@
 
 {% endblock %}
 
-{% block extra_js %}
+{% block js %}
 
     <!--
     Essential Scripts
     =====================================-->
+
 
     <!-- Main jQuery -->
     <script src="{% static 'plugins/jquery/jquery.js' %}"></script>
@@ -241,57 +228,7 @@
     <!-- Google Map -->
     <script src="{% static 'plugins/google-map/map.js' %}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>
+
     <script src="{% static 'js/script.js' %}"></script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js"></script>
-    <script src="https://cdn.datatables.net/searchbuilder/1.1.0/js/dataTables.searchBuilder.min.js"></script>
-    <script src="https://cdn.datatables.net/datetime/1.1.0/js/dataTables.dateTime.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.colVis.min.js"></script>
-
-    <script>
-    $(document).ready(function() {
-    $('#example1').DataTable( {
-        dom: 'QBfrtip',
-        colReorder: true,
-        buttons: [
-            'colvis',
-            'copy',
-            {
-                extend: 'excel',
-                messageTop: 'PDF created by PDFMake with Buttons for DataTables.',
-                exportOptions: {
-                    columns: ':visible'
-                }
-            },
-            {
-                extend: 'pdfHtml5',
-                messageTop: 'VISA CONSULTANT',
-                exportOptions: {
-                    columns: ':visible'
-                }
-            },
-              {
-                    extend: 'print',
-                    messageTop: "<div class='col-sm-3'></div><div class='col-sm-3'></div>",
-                    exportOptions:{
-                        columns:':visible'
-                    }
-            }
-        ]
-    } );
-} );
-    </script>
-    <!-- Custom Js -->
-    <script src="{% static 'js/admin.js'%}"></script>
-
 {% endblock %}
-
-

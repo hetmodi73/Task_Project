@@ -316,7 +316,7 @@
                                         <h3 class="text-md mb-4">User Form</h3>
                                         <div class="form-group">
                                         <h6>NAME</h6>
-                                         {% crispy_field form.NAME 'class' 'form-control' %}
+                                         {% crispy_field form.NAME 'class' 'form-control'%}
                                           {% if  form.NAME.errors %}
                                               {% for error in form.NAME.errors %}
                                                   <div class="invalid-feedback">
@@ -328,7 +328,7 @@
                                         </div>
                                         <div class="form-group">
                                         <h6>USERNAME</h6>
-                                         {% crispy_field form.EMAIL_ID 'class' 'form-control' %}
+                                         {% crispy_field form.EMAIL_ID 'class' 'form-control'%}
                                           {% if  form.EMAIL_ID.errors %}
                                               {% for error in form.EMAIL_ID.errors %}
                                                   <div class="invalid-feedback">
@@ -340,7 +340,7 @@
                                         </div>
                                         <div class="form-group">
                                         <h6>PASSWORD</h6>
-                                         {% crispy_field form.PASSWORD 'type=password' 'class' 'form-control' %}
+                                         {% crispy_field form.PASSWORD 'class' 'form-control'%}
                                           {% if  form.PASSWORD.errors %}
                                               {% for error in form.PASSWORD.errors %}
                                                   <div class="invalid-feedback">
@@ -352,7 +352,7 @@
                                         </div>
                                         <div class="form-group">
                                         <h6>CONTACT NUMBER</h6>
-                                         {% crispy_field form.PHONE_NO 'class' 'form-control' %}
+                                         {% crispy_field form.PHONE_NO 'class' 'form-control'%}
                                           {% if  form.PHONE_NO.errors %}
                                               {% for error in form.PHONE_NO.errors %}
                                                   <div class="invalid-feedback">
@@ -364,7 +364,7 @@
                                         </div>
                                         <div class="form-group">
                                         <h6>GENDER</h6>
-                                              {% crispy_field form.GENDER 'class' 'form-control' %}
+                                              {% crispy_field form.GENDER 'class' 'form-control'%}
                                               {% if  form.GENDER.errors %}
                                                   {% for error in form.GENDER.errors %}
                                                       <div class="invalid-feedback">
@@ -378,7 +378,7 @@
                                         </div>
                                         <div class="form-group-2 mb-4">
                                         <h6>ADDRESS</h6>
-                                          {% crispy_field form.ADDRESS 'class' 'form-control' %}
+                                          {% crispy_field form.ADDRESS 'class' 'form-control'%}
                                             {% if  form.ADDRESS.errors %}
                                                 {% for error in form.ADDRESS.errors %}
                                                     <div class="invalid-feedback">
@@ -390,7 +390,7 @@
                                         </div>
                                         <div class="form-group">
                                         <h6>ROLE</h6>
-                                         {% crispy_field form.ROLE 'class' 'form-control' %}
+                                         {% crispy_field form.ROLE 'class' 'form-control'%}
                                           {% if  form.ROLE.errors %}
                                               {% for error in form.ROLE.errors %}
                                                   <div class="invalid-feedback">
@@ -402,7 +402,7 @@
                                         </div>
                                         <div class="form-group">
                                         <h6>STATUS</h6>
-                                              {% crispy_field form.STATUS 'class' 'form-control' %}
+                                              {% crispy_field form.STATUS 'class' 'form-control'%}
                                               {% if  form.STATUS.errors %}
                                                   {% for error in form.STATUS.errors %}
                                                       <div class="invalid-feedback">
