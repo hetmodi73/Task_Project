@@ -7,7 +7,7 @@ class showservice(admin.ModelAdmin):
 
 admin.site.register(service,showservice)
 
-class showservice_detail(admin.ModelAdmin):
+class showservice_details(admin.ModelAdmin):
     list_display = ['SERVICE_ID','SERVICE_DETAIL_NAME']
 
-admin.site.register(service_details,showservice_detail)
+admin.site.register(service_details,showservice_details)

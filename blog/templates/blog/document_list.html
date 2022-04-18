@@ -69,7 +69,15 @@
 						<li><a class="dropdown-item" href="{% url 'pricing' %}">Pricing</a></li>
 					</ul>
 			  </li>
-			   <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Services</a></li>
+
+			   <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="{% url 'service' %}" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+					<ul class="dropdown-menu" aria-labelledby="dropdown05">
+						<li><a class="dropdown-item" href="{% url 'service' %}">Services</a></li>
+						<li><a class="dropdown-item" href="{% url 'service_details_form' %}">Service Details</a></li>
+					</ul>
+			  </li>
+
 			   <li class="nav-item"><a class="nav-link" href="{% url 'project' %}">Portfolio</a></li>
 			   <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="{% url 'blog_grid' %}" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
@@ -95,7 +103,7 @@
 <!-- Header Close -->
 
               <div class="card-header">
-                  <h2 align="center"> SUB QUESTION DATA </h2>
+                  <h2 align="center"> USER DOCUMENT DATA </h2>
               </div>
 
               <!-- /.card-header -->

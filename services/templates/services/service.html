@@ -83,7 +83,16 @@
 						<li><a class="dropdown-item" href="{% url 'pricing' %}">Pricing</a></li>
 					</ul>
 			  </li>
-			   <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Services</a></li>
+{#			   <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Services</a></li>#}
+
+			   <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="{% url 'service' %}" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+					<ul class="dropdown-menu" aria-labelledby="dropdown05">
+						<li><a class="dropdown-item" href="{% url 'service' %}">Services</a></li>
+						<li><a class="dropdown-item" href="{% url 'service_details_form' %}">Service Details</a></li>
+					</ul>
+			  </li>
+
 			   <li class="nav-item"><a class="nav-link" href="{% url 'project' %}">Portfolio</a></li>
 			   <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="{% url 'blog_grid' %}" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
@@ -140,6 +149,8 @@
 				</div>
 			</div>
 		</div>
+
+
 
 <!--  Section Services End -->
  <!-- Section Cta Start -->
@@ -199,8 +210,8 @@
 
                         <!-- service form end -->
 
-{#                    	<!-- service_details form start -->#}
-{##}
+                    	<!-- service_details form start -->
+
 {#                        <section class="service_details-form-wrap section">#}
 {#                        <div class="container">#}
 {#                            <div class="row">#}
@@ -255,8 +266,8 @@
 {#                            </div>#}
 {#                        </div>#}
 {#                        </section>#}
-{##}
-{#                        <!-- service form end -->#}
+
+                        <!-- service_details form end -->
 
 				</div>
 			</div>
@@ -265,9 +276,6 @@
 </section>
 <!--  Section Cta End-->
 <!-- Section Testimonial Start -->
-
-
-
 
 
 		<div class="row justify-content-center">

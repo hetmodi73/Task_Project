@@ -2,10 +2,18 @@ from django.contrib.auth import login
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.views.generic import CreateView,ListView,UpdateView,DetailView,DeleteView
-from .models import user
+from .models import user,Signup
 
 # Create your views here.
-@login_required
+# @login_required
+
+def signup(request):
+    return render(request,"client/signup.html")
+
+class NewSignupView(CreateView):
+    model = Signup
+    fields = '__all__'
+    template_name = 'client/signup.html'
 
 def index(request):
     return render(request,"client/index.html")

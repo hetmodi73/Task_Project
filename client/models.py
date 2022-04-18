@@ -3,6 +3,13 @@ from django.urls import reverse
 
 # Create your models here.
 
+class login(models.Model):
+    username=models.CharField(max_length=30)
+    password=models.CharField(max_length=30)
+
+    def __str__(self):
+        return f"{self.username}-{self.password}"
+
 class user(models.Model):
     # L_ID=models.IntegerField(null=True)
     EMAIL_ID=models.CharField(max_length=25)
@@ -28,3 +35,19 @@ class user(models.Model):
 
     def get_absolute_url(self):
         return reverse('user-view')
+
+class Signup(models.Model):
+    name=models.CharField(max_length=30)
+    email=models.CharField(max_length=30)
+    password=models.CharField(max_length=30)
+    re_pass=models.CharField(max_length=30)
+
+    def __str__(self):
+        return f"{self.name}-{self.email}"
+
+    def get_absolute_url(self):
+        return reverse('index')
+
+
+
+

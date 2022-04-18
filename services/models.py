@@ -22,3 +22,5 @@ class service_details(models.Model):
 
     def get_absolute_url(self):
         return reverse('service_details-view')
+
+

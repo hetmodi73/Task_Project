@@ -83,7 +83,15 @@
 						<li><a class="dropdown-item" href="{% url 'pricing' %}">Pricing</a></li>
 					</ul>
 			  </li>
-			   <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Services</a></li>
+
+			   <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="{% url 'service' %}" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+					<ul class="dropdown-menu" aria-labelledby="dropdown05">
+						<li><a class="dropdown-item" href="{% url 'service' %}">Services</a></li>
+						<li><a class="dropdown-item" href="{% url 'service_details_form' %}">Service Details</a></li>
+					</ul>
+			  </li>
+
 			   <li class="nav-item"><a class="nav-link" href="{% url 'project' %}">Portfolio</a></li>
 			   <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="{% url 'blog_grid' %}" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
@@ -327,6 +335,7 @@
 {#                                            <input name="NAME" type="text" class="form-control" placeholder="Enter Your Name">#}
                                         </div>
                                         <div class="form-group">
+
                                         <h6>USERNAME</h6>
                                          {% crispy_field form.EMAIL_ID 'class' 'form-control'%}
                                           {% if  form.EMAIL_ID.errors %}
@@ -339,6 +348,7 @@
 {#                                            <input name="EMAIL_ID" type="email" class="form-control" placeholder="Enter Email Address">#}
                                         </div>
                                         <div class="form-group">
+
                                         <h6>PASSWORD</h6>
                                          {% crispy_field form.PASSWORD 'class' 'form-control'%}
                                           {% if  form.PASSWORD.errors %}
@@ -351,6 +361,7 @@
 {#                                            <input name="PASSWORD" type="password" class="form-control" placeholder="Enter Your Password">#}
                                         </div>
                                         <div class="form-group">
+
                                         <h6>CONTACT NUMBER</h6>
                                          {% crispy_field form.PHONE_NO 'class' 'form-control'%}
                                           {% if  form.PHONE_NO.errors %}
@@ -363,6 +374,7 @@
 {#                                            <input name="PHONE_NO" type="text" class="form-control" placeholder="Enter Your Number">#}
                                         </div>
                                         <div class="form-group">
+
                                         <h6>GENDER</h6>
                                               {% crispy_field form.GENDER 'class' 'form-control'%}
                                               {% if  form.GENDER.errors %}
@@ -377,6 +389,7 @@
 {#                                            <input type="radio" name="GENDER" value="other">other#}
                                         </div>
                                         <div class="form-group-2 mb-4">
+
                                         <h6>ADDRESS</h6>
                                           {% crispy_field form.ADDRESS 'class' 'form-control'%}
                                             {% if  form.ADDRESS.errors %}
@@ -389,6 +402,7 @@
 {#                                            <textarea name="ADDRESS" class="form-control" rows="4" placeholder="Enter Your Address"></textarea>#}
                                         </div>
                                         <div class="form-group">
+
                                         <h6>ROLE</h6>
                                          {% crispy_field form.ROLE 'class' 'form-control'%}
                                           {% if  form.ROLE.errors %}
@@ -401,6 +415,7 @@
 {#                                            <input name="ROLE" type="text" class="form-control" placeholder="Enter Your Role">#}
                                         </div>
                                         <div class="form-group">
+
                                         <h6>STATUS</h6>
                                               {% crispy_field form.STATUS 'class' 'form-control'%}
                                               {% if  form.STATUS.errors %}

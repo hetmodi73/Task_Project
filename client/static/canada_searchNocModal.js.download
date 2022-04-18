@@ -1,0 +1,128 @@
+$('document').ready( function($)
+{
+    $('#occupationSearch').autocomplete({
+        source: function( request, response ) {
+            $.ajax({
+                type : 'POST',
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify({
+                    "search": request.term,
+                    "lang": "en"
+                }),
+                url: window.evaluatorHost + '/api/occupational-classifications',
+                success: function(data) {
+                    if( data.items.length >= 1 )
+                        response( $.map( data.items, function(item) {
+                            return {
+                                "label": item.label,
+                                "noc": item.id
+                            };
+                        }));
+                    else
+                        response( [{ "label": "No matching records found", "noc": null }] );
+                },
+                error: function(data) {
+
+                }
+            });
+        },
+        select: function (event, ui) {
+            var result = '<p>This occupation is ' + (isOccupationNocSkilled(ui.item.noc) ?
+                    '<span style="color: darkgreen;"><b>SKILLED</b></span>' :
+                    '<span style="color: darkred;"><b>NOT SKILLED</b></span>' )
+                + '</p>';
+
+            result += '<label>Title</label>: ' + ui.item.label + '</label><br />';
+            result += '<label>NOC</label>: ' + ui.item.noc + '</label><br />';
+            result += '<label>Skill Level</label>: ' + getSkillLevelFromNoc( ui.item.noc );
+            result += '<div id="skilledJobClassifierFullDescription"></div>';
+            $('#skilledJobClassifierResult').html(result);
+
+            $.ajax({
+                type: 'GET',
+                url: window.evaluatorHost + '/api/occupational-classifications/' + ui.item.noc,
+                success: function(data){
+                    console.log(data);
+                    if( data.result == 'success' ){
+                        var details = '<label>Description</label>:<br />';
+                        details += '<p>' + data.occupation.description + '</p>';
+
+                        if( typeof data.occupation.duties != 'undefined' ){
+                            details += '<label>Duties</label>:<br />';
+                            details += '<ul>';
+                            for( var i = 0; i < data.occupation.duties.length; i++){
+                                details += '<li>' + data.occupation.duties[i] + '</li>';
+                            }
+                            details += '</ul>';
+                        }
+
+                        $('#skilledJobClassifierFullDescription').html(details);
+                    }
+                }
+            });
+        },
+        appendTo: "#skilledJobClassifierModal",
+        change: function (event, ui) {
+            // Force Selection From List
+            if (!ui.item)
+                this.value = '';
+        }
+        }).data("ui-autocomplete")._renderItem = function( ul, item ) {
+            // Disable option if value is null
+            if( item.noc == null )
+                return $('<li class="ui-state-disabled"><i>'+item.label+'</i></li>')
+                    .appendTo(ul);
+            else
+                return $("<li class='ui-menu-item'>")
+                    .append("<div class='ui-menu-item-wrapper'>" + item.label + "</div>")
+                    .appendTo(ul);
+        };
+
+    window.isOccupationNocSkilled = function(noc, levels){
+        if( typeof levels == 'undefined')
+            var levels = ['00', '0','A','B'];
+
+        if( levels.indexOf(String(getSkillLevelFromNoc(noc))) != -1)
+            return true;
+
+        return false;
+    };
+
+    // NOC Level Matrix
+    // http://noc.esdc.gc.ca/English/NOC/Matrix2016.aspx?ver=16
+    window.getSkillLevelFromNoc = function(noc){
+        if( isNaN(noc) )
+            return null;
+
+        if( String(noc).charAt(0) == '0' && String(noc).charAt(1) == '0')
+            return '00';
+
+        if( String(noc).charAt(0) == '0')
+            return  '0';
+
+        switch(String(noc).charAt(1)){
+            case '0':
+            case '1':
+                return 'A';
+
+            case '2':
+                return  'B';
+
+            case '3':
+                if( ['1', '4', '6', '7'].indexOf(String(noc).charAt(0)) != -1  )
+                    return  'B';
+                else
+                    return 'C';
+
+            case '4':
+            case '5':
+                return  'C';
+
+            case '6':
+            case '7':
+                return  'D';
+        }
+    };
+
+});

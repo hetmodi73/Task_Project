@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import CreateView,ListView,UpdateView,DetailView,DeleteView
-from .models import service,service_details
+from .models import service, service_details
 # Create your views here.
 
 def services(request):
@@ -39,6 +39,10 @@ class DeleteServiceView(DeleteView):
     model = service
     success_url = '/services/view'
 
+
+def service_details_form(request):
+    return render(request, "services/service_details_form.html")
+
 def service_details_list(request):
     return render(request, "services/service_details_list.html")
 
@@ -51,7 +55,7 @@ def service_details_confirm_delete(request):
 class NewService_detailsView(CreateView):
     model = service_details
     fields = '__all__'
-    template_name = 'services/service.html'
+    template_name = 'services/service_details_form.html'
 
 class ListService_detailsView(ListView):
     model = service_details
@@ -61,7 +65,7 @@ class ListService_detailsView(ListView):
 class UpdateService_detailsView(UpdateView):
     model = service_details
     fields = '__all__'
-    template_name = 'services/service.html'
+    template_name = 'services/service_details_form.html'
 
 class DetailService_detailsView(DetailView):
     model = service_details

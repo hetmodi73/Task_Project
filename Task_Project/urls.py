@@ -29,8 +29,8 @@ urlpatterns = [
     path("Contact/", include("Contact.urls")),
     path("Feedback/",include("Feedback.urls")),
     path("portfolio/",include("portfolio.urls")),
-    path("blog/", include("blog.urls"))
-
+    path("blog/", include("blog.urls")),
+    path("visa/",include("visa.urls"))
 ]
 
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -132,7 +132,15 @@
 						<li><a class="dropdown-item" href="{% url 'pricing' %}">Pricing</a></li>
 					</ul>
 			  </li>
-			   <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Services</a></li>
+
+			   <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="{% url 'service' %}" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+					<ul class="dropdown-menu" aria-labelledby="dropdown05">
+						<li><a class="dropdown-item" href="{% url 'service' %}">Services</a></li>
+						<li><a class="dropdown-item" href="{% url 'service_details_form' %}">Service Details</a></li>
+					</ul>
+			  </li>
+
 			   <li class="nav-item"><a class="nav-link" href="{% url 'project' %}">Portfolio</a></li>
 			   <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="{% url 'blog_grid' %}" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
@@ -204,7 +212,7 @@
                                 </div>
                                 <!-- end message -->
 
-{#                                <span class="text-color">Send a message</span>#}
+                                <span class="text-color">Send a feedback</span>
                                 <h3 class="text-md mb-4">Feedback Form</h3>
 
                                  <div class="form-group">
@@ -229,6 +237,7 @@
                                                 </div>
                                             {% endfor %}
                                         {% endif %}
+
 {#                                <h5>RATINGS</h5>#}
 {#                                <div class="form-control">#}
 {#                                  <form>#}
@@ -248,6 +257,7 @@
 {#                                    </form>#}
 {#                                </div>#}
                                 </div>
+
                                 <div class="form-group">
                                 <h6>COMMENT</h6>
                                   {% crispy_field form.COMMENT %}

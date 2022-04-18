@@ -1,0 +1,1439 @@
+.collapse-icon{
+    font-size: 1.2em;
+    margin-right: 9px;
+    cursor: pointer;
+}
+
+.SchemaForm .btn-primary{
+    border-color: inherit;
+}
+
+button.extendedHelpIcon,
+button.extendedHelpIcon:active,
+button.extendedHelpIcon:focus,
+button.extendedHelpIcon:hover{
+    border: none;
+    padding: 0;
+    margin: 0;
+    -webkit-focus-ring-color: white;
+    outline-color: white;
+}
+
+div.field-string > div > p.field-description{
+    padding: 4px;
+    font-style: italic;
+    font-size: 90%;
+}
+
+
+.has-error .form-control{
+    background-color: #FDF0EE;
+}
+
+.field-error .btn-group .btn{
+    border-color: #b94a48;
+    box-shadow: 0px 0px 2px 2px #FCD4CC;
+}
+
+.field-error div.checkbox label i {
+    color: lightcoral !important;
+}
+
+.autocomplete-match-error{
+    padding: 5px 5px 5px 20px;
+    color: #b94a48;
+}
+
+.modal-backdrop {
+    z-index: 99999;
+}
+.modal{
+    z-index: 999999;
+}
+
+.smaller-column{
+    display: block;
+    width: 20vw;
+    min-width: 170px;
+}
+
+.short-column{
+    display: block;
+    width: 33vw;
+    min-width: 430px;
+}
+
+div.field-label span{
+    max-width: 100%;
+    font-weight: bold;
+}
+
+.immigration-form label {
+    font-weight: bold;
+}
+
+.small-field input,
+.small-field select{
+    width: 15vw;
+    min-width: 170px;
+}
+
+.inline-block{
+    display: inline;
+}
+
+.no-padding-left{
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.SchemaForm .form-footer .form-footer-seal{
+    text-align: center;
+}
+
+.immigration-option-box .top-bar{
+    padding: 5px;
+    color: white;
+}
+
+.immigration-option-box .img-wrapper{
+    display: inline-block; line-height: 4em; padding: 15px;
+}
+
+.immigration-option-box .title{
+    display: inline-block; font-size: 20px; vertical-align: middle;
+}
+
+.immigration-option-box .caption{
+    color: black;
+}
+
+.title-hidden > div > label{
+    display: none;
+}
+
+.extendedHelp{
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+.array-item{
+    position: relative;
+    display: table;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.array-item .col-xs-9{
+    width: 100%;
+}
+
+.array-item-toolbox{
+    position: absolute;
+    top: 0.3em;
+    right: 0.3em;
+    width: 5em;
+}
+
+button.array-item-remove{
+    background-color: #3097D1;
+    border-color: #2a88bd;
+}
+
+.array-item-add button{
+    width: 14em;
+    float: right;
+    margin-right: 0.5em;
+}
+
+.array-item-add button:after{
+    content: " Add Item";
+}
+
+.immigration-option-box{
+    min-height: 22.6em;
+}
+
+.box-side-option{
+    min-height: 11.2em;
+}
+
+.immigration-option-box h4,
+.immigration-option-box .caption .strong{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.immigration-option-box .caption .strong{
+    font-weight: bold;
+}
+
+.SchemaForm{
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+.SchemaForm .progressBarWrapper{
+    position: absolute;
+    top: -1.5em;
+    right: 0em;
+}
+
+
+.thumbnail-new{
+    margin: 6px;
+    border: 1px solid #BBBBBB;
+    padding: 4px;
+}
+
+.right-panel-item{
+    font-size: 0.9em;
+    line-height: 160%;
+}
+
+.right-panel-item a{
+    color: #b94a48;
+    font-size: 1.1em;
+}
+
+.label-percentage > .form-group > div,
+.label-currency > .form-group > div {
+    position: relative;
+
+}
+
+.label-percentage > .form-group > div > input,
+.label-currency > .form-group > div > input {
+    padding-left: 25px;
+}
+
+.label-percentage > .form-group > div:after{
+    position: absolute;
+    color: grey;
+    left: 8px;
+    top: 8px;
+    content: "%";
+}
+
+.label-currency > .form-group > div:after{
+    position: absolute;
+    color: grey;
+    left: 8px;
+    top: 8px;
+    content: "$";
+}
+
+
+
+
+
+/**
+ * React Select
+ * ============
+ * Created by Jed Watson and Joss Mackison for KeystoneJS, http://www.keystonejs.com/
+ * https://twitter.com/jedwatson https://twitter.com/jossmackison https://twitter.com/keystonejs
+ * MIT License: https://github.com/JedWatson/react-select
+*/
+.Select {
+    position: relative;
+}
+.Select input::-webkit-contacts-auto-fill-button,
+.Select input::-webkit-credentials-auto-fill-button {
+    display: none !important;
+}
+.Select input::-ms-clear {
+    display: none !important;
+}
+.Select input::-ms-reveal {
+    display: none !important;
+}
+.Select,
+.Select div,
+.Select input,
+.Select span {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.Select.is-disabled .Select-arrow-zone {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.35;
+}
+.Select.is-disabled > .Select-control {
+    background-color: #f9f9f9;
+}
+.Select.is-disabled > .Select-control:hover {
+    box-shadow: none;
+}
+.Select.is-open > .Select-control {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    background: #fff;
+    border-color: #b3b3b3 #ccc #d9d9d9;
+}
+.Select.is-open > .Select-control .Select-arrow {
+    top: -2px;
+    border-color: transparent transparent #999;
+    border-width: 0 5px 5px;
+}
+.Select.is-searchable.is-open > .Select-control {
+    cursor: text;
+}
+.Select.is-searchable.is-focused:not(.is-open) > .Select-control {
+    cursor: text;
+}
+.Select.is-focused > .Select-control {
+    background: #fff;
+}
+.Select.is-focused:not(.is-open) > .Select-control {
+    border-color: #007eff;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 3px rgba(0, 126, 255, 0.1);
+    background: #fff;
+}
+.Select.has-value.is-clearable.Select--single > .Select-control .Select-value {
+    padding-right: 42px;
+}
+.Select.has-value.Select--single > .Select-control .Select-value .Select-value-label,
+.Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label {
+    color: #333;
+}
+.Select.has-value.Select--single > .Select-control .Select-value a.Select-value-label,
+.Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label {
+    cursor: pointer;
+    text-decoration: none;
+}
+.Select.has-value.Select--single > .Select-control .Select-value a.Select-value-label:hover,
+.Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label:hover,
+.Select.has-value.Select--single > .Select-control .Select-value a.Select-value-label:focus,
+.Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label:focus {
+    color: #007eff;
+    outline: none;
+    text-decoration: underline;
+}
+.Select.has-value.Select--single > .Select-control .Select-value a.Select-value-label:focus,
+.Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label:focus {
+    background: #fff;
+}
+.Select.has-value.is-pseudo-focused .Select-input {
+    opacity: 0;
+}
+.Select.is-open .Select-arrow,
+.Select .Select-arrow-zone:hover > .Select-arrow {
+    border-top-color: #666;
+}
+.Select.Select--rtl {
+    direction: rtl;
+    text-align: right;
+}
+.Select-control {
+    background-color: #fff;
+    border-color: #d9d9d9 #ccc #b3b3b3;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    color: #333;
+    cursor: default;
+    display: table;
+    border-spacing: 0;
+    border-collapse: separate;
+    height: 36px;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.Select-control:hover {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+.Select-control .Select-input:focus {
+    outline: none;
+    background: #fff;
+}
+.Select-placeholder,
+.Select--single > .Select-control .Select-value {
+    bottom: 0;
+    color: #aaa;
+    left: 0;
+    line-height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.Select-input {
+    height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: middle;
+}
+.Select-input > input {
+    width: 100%;
+    background: none transparent;
+    border: 0 none;
+    box-shadow: none;
+    cursor: default;
+    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0;
+    outline: none;
+    line-height: 17px;
+    /* For IE 8 compatibility */
+    padding: 8px 0 12px;
+    /* For IE 8 compatibility */
+    -webkit-appearance: none;
+}
+.is-focused .Select-input > input {
+    cursor: text;
+}
+.has-value.is-pseudo-focused .Select-input {
+    opacity: 0;
+}
+.Select-control:not(.is-searchable) > .Select-input {
+    outline: none;
+}
+.Select-loading-zone {
+    cursor: pointer;
+    display: table-cell;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 16px;
+}
+.Select-loading {
+    -webkit-animation: Select-animation-spin 400ms infinite linear;
+    -o-animation: Select-animation-spin 400ms infinite linear;
+    animation: Select-animation-spin 400ms infinite linear;
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    border-right-color: #333;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+.Select-clear-zone {
+    -webkit-animation: Select-animation-fadeIn 200ms;
+    -o-animation: Select-animation-fadeIn 200ms;
+    animation: Select-animation-fadeIn 200ms;
+    color: #999;
+    cursor: pointer;
+    display: table-cell;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 17px;
+}
+.Select-clear-zone:hover {
+    color: #D0021B;
+}
+.Select-clear {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1;
+}
+.Select--multi .Select-clear-zone {
+    width: 17px;
+}
+.Select-arrow-zone {
+    cursor: pointer;
+    display: table-cell;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 25px;
+    padding-right: 5px;
+}
+.Select--rtl .Select-arrow-zone {
+    padding-right: 0;
+    padding-left: 5px;
+}
+.Select-arrow {
+    border-color: #999 transparent transparent;
+    border-style: solid;
+    border-width: 5px 5px 2.5px;
+    display: inline-block;
+    height: 0;
+    width: 0;
+    position: relative;
+}
+.Select-control > *:last-child {
+    padding-right: 5px;
+}
+.Select--multi .Select-multi-value-wrapper {
+    display: inline-block;
+}
+.Select .Select-aria-only {
+    position: absolute;
+    display: inline-block;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    float: left;
+}
+@-webkit-keyframes Select-animation-fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes Select-animation-fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.Select-menu-outer {
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top-color: #e6e6e6;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+    margin-top: -1px;
+    max-height: 200px;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 1;
+    -webkit-overflow-scrolling: touch;
+}
+.Select-menu {
+    max-height: 198px;
+    overflow-y: auto;
+}
+.Select-option {
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #666666;
+    cursor: pointer;
+    display: block;
+    padding: 8px 10px;
+}
+.Select-option:last-child {
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.Select-option.is-selected {
+    background-color: #f5faff;
+    /* Fallback color for IE 8 */
+    background-color: rgba(0, 126, 255, 0.04);
+    color: #333;
+}
+.Select-option.is-focused {
+    background-color: #ebf5ff;
+    /* Fallback color for IE 8 */
+    background-color: rgba(0, 126, 255, 0.08);
+    color: #333;
+}
+.Select-option.is-disabled {
+    color: #cccccc;
+    cursor: default;
+}
+.Select-noresults {
+    box-sizing: border-box;
+    color: #999999;
+    cursor: default;
+    display: block;
+    padding: 8px 10px;
+}
+.Select--multi .Select-input {
+    vertical-align: middle;
+    margin-left: 10px;
+    padding: 0;
+}
+.Select--multi.Select--rtl .Select-input {
+    margin-left: 0;
+    margin-right: 10px;
+}
+.Select--multi.has-value .Select-input {
+    margin-left: 5px;
+}
+.Select--multi .Select-value {
+    background-color: #ebf5ff;
+    /* Fallback color for IE 8 */
+    background-color: rgba(0, 126, 255, 0.08);
+    border-radius: 2px;
+    border: 1px solid #c2e0ff;
+    /* Fallback color for IE 8 */
+    border: 1px solid rgba(0, 126, 255, 0.24);
+    color: #007eff;
+    display: inline-block;
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-left: 5px;
+    margin-top: 5px;
+    vertical-align: top;
+}
+.Select--multi .Select-value-icon,
+.Select--multi .Select-value-label {
+    display: inline-block;
+    vertical-align: middle;
+}
+.Select--multi .Select-value-label {
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    cursor: default;
+    padding: 2px 5px;
+}
+.Select--multi a.Select-value-label {
+    color: #007eff;
+    cursor: pointer;
+    text-decoration: none;
+}
+.Select--multi a.Select-value-label:hover {
+    text-decoration: underline;
+}
+.Select--multi .Select-value-icon {
+    cursor: pointer;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    border-right: 1px solid #c2e0ff;
+    /* Fallback color for IE 8 */
+    border-right: 1px solid rgba(0, 126, 255, 0.24);
+    padding: 1px 5px 3px;
+}
+.Select--multi .Select-value-icon:hover,
+.Select--multi .Select-value-icon:focus {
+    background-color: #d8eafd;
+    /* Fallback color for IE 8 */
+    background-color: rgba(0, 113, 230, 0.08);
+    color: #0071e6;
+}
+.Select--multi .Select-value-icon:active {
+    background-color: #c2e0ff;
+    /* Fallback color for IE 8 */
+    background-color: rgba(0, 126, 255, 0.24);
+}
+.Select--multi.Select--rtl .Select-value {
+    margin-left: 0;
+    margin-right: 5px;
+}
+.Select--multi.Select--rtl .Select-value-icon {
+    border-right: none;
+    border-left: 1px solid #c2e0ff;
+    /* Fallback color for IE 8 */
+    border-left: 1px solid rgba(0, 126, 255, 0.24);
+}
+.Select--multi.is-disabled .Select-value {
+    background-color: #fcfcfc;
+    border: 1px solid #e3e3e3;
+    color: #333;
+}
+.Select--multi.is-disabled .Select-value-icon {
+    cursor: not-allowed;
+    border-right: 1px solid #e3e3e3;
+}
+.Select--multi.is-disabled .Select-value-icon:hover,
+.Select--multi.is-disabled .Select-value-icon:focus,
+.Select--multi.is-disabled .Select-value-icon:active {
+    background-color: #fcfcfc;
+}
+@keyframes Select-animation-spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
+@-webkit-keyframes Select-animation-spin {
+    to {
+        -webkit-transform: rotate(1turn);
+    }
+}
+
+
+/* Big Radio/Check buttons */
+div.checkbox label {
+    padding-left: 0px;
+}
+div.checkbox label span{
+    vertical-align: middle;
+}
+div.checkbox input[type="checkbox"] {
+    display: none;
+}
+div.checkbox label input[type="checkbox"] ~ i.far.fa-square {
+    color: #c8c8c8;
+    display: inline;
+    vertical-align: middle;
+}
+div.checkbox label input[type="checkbox"] ~ i.far.fa-check-square{
+    display: none;
+}
+div.checkbox label input[type="checkbox"]:checked ~ i.far.fa-square{
+    display: none;
+}
+div.checkbox label input[type="checkbox"]:checked ~ i.far.fa-check-square{
+    color: #3097D1;
+    display: inline;
+    vertical-align: middle;
+}
+div.checkbox label:hover input[type="checkbox"] ~ i.fas {
+    color: #3097D1;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+
+
+/** Floating Icon **/
+.floating-chat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: fixed;
+    bottom: 10px;
+    right: calc( (100% - 1140px) / 2) ;
+    animation: showNav 250ms ease-in-out both;
+    opacity: 1;
+    z-index: 100;
+}
+
+@keyframes showNav {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@media (max-width: 1200px){
+    /*middle size container*/
+    .floating-chat {
+        right: calc( (100% - 910px) / 2) ;
+    }
+}
+@media (max-width: 768px){
+    /*small size container (mobile)*/
+    .floating-chat {
+        right: 10px;
+        bottom: 55px;
+    }
+}
+
+.floating-chat .icon{
+    cursor: pointer;
+    height: 40px;
+    width: auto;
+    border-radius: 20px;
+    padding-top: 8px;
+    padding-bottom: 9px;
+    padding-left: 14px;
+    padding-right: 14px;
+    background-color: #DB291C;
+    color: white;
+    font-weight: 800;
+    box-shadow: 2px 2px 6px 0px grey;
+}
+
+.floating-chat .icon i{
+    font-size: 20px;
+    margin-right: 5px;
+    margin-top: 1px;
+}
+
+.floating-chat.enter {
+    transform: translateY(0);
+    opacity: 0.6;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.14);
+}
+
+.floating-chat .chat{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    opacity: 1;
+    border-radius: 6px;
+    padding: 10px;
+    transition: all 250ms ease-out;
+    margin: auto;
+    right: 8px;
+    bottom: 55px;
+    background-color: #EFEFEF; /*rgba(219, 41, 28, 0.27);*/
+    /*border: 1px solid #DB291C;*/
+    border: 3px solid rgba(219, 41, 28, 0.27);
+    color: black;
+}
+
+.floating-chat .chat:after,
+.floating-chat .chat:before {
+    top: calc(100% + 2px);
+    right: 5px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.floating-chat .chat:after {
+    border-top-color: rgba(219, 41, 28, 0.27);
+    border-width: 10px;
+    margin-left: -10px;
+    bottom: -5px;
+}
+
+.CrsForm label{
+    font-weight: normal;
+}
+
+.ui-autocomplete {
+    /* font-family to all */
+    background-color: white;
+    width: 200px;
+    overflow-x: hidden;
+    border-radius: 0.25rem;
+    border: 1px solid #d3d3d3;
+    padding: 0 0.6rem;
+}
+
+.ui-autocomplete:before {
+    display: block;
+    content: "- Please select one option below -";
+    font-style: italic;
+}
+
+.ui-autocomplete .ui-menu-item {
+    line-height: 2em;
+}
+
+.ui-autocomplete .ui-menu-item .ui-corner-all {
+    /* all <a> */
+    border: 1px solid #eceff1;
+    color: grey;
+}
+
+.ui-autocomplete .ui-menu-item .ui-menu-item-wrapper:hover{
+    background-color: #c2e0ff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.ui-autocomplete .ui-menu-item .ui-state-focus {
+    /* selected <a> */
+}
+
+
+select.btn-mini {
+    height: auto;
+    line-height: 14px;
+}
+
+/* this is optional (see below) */
+select.btn {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    padding-right: 16px;
+}
+
+select.btn-mini + .caret {
+    margin-left: -20px;
+    margin-top: 9px;
+}
+
+
+
+.thankyou-page .btn-primary,
+.contract-page .btn-primary
+{
+    background-color: #ff6666;
+    border-color: #ff4f52;
+    border-radius: 0;
+}
+
+.thankyou-page .icon-background,
+.contract-page .icon-background
+{
+    color: #ff6666;
+}
+
+.thankyou-page ul,
+.contract-page ul
+{
+    list-style: none;
+}
+
+.thankyou-page ul li::before,
+.contract-page ul li::before
+{
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #ff6666; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1.5em; /* Also needed for space (tweak if needed) */
+    margin-left: -1.5em; /* Also needed for space (tweak if needed) */
+}
+
+.thankyou-page table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 4px;
+}
+
+.thankyou-page td {
+    background-color: #f2f2f2;
+    line-height: 32px;
+}
+
+div.call-to-action {
+    /*border-top: solid 1px #BFBFBF;
+    border-bottom: solid 1px #BFBFBF;*/
+    box-shadow: 0px 8px 8px -8px grey, 0px -8px 8px -8px grey;
+    margin-top: 2.5em !important;
+    margin-bottom: 2.5em !important;
+}
+
+
+
+
+
+/** ***** ASSESSMENT STYLES ******  **/
+
+.SchemaForm .btn{
+    background-color: rgb(245,245,245);
+    border-color: rgb(204,204,204);
+}
+
+
+@media (max-width: 767px) {
+    .SchemaForm .text-right { text-align: left; }
+}
+
+
+
+.SchemaForm .btn:hover,
+.SchemaForm .btn:focus,
+.SchemaForm .btn.active,
+.SchemaForm .btn-primary:hover,
+.SchemaForm .btn-primary:focus{
+    background-color: #3097D1;
+    border-color: #2a88bd;
+    color: white;
+}
+
+.SchemaForm .btn-primary{
+    background-color: #3097D1;
+    border-color: #2a88bd;
+}
+
+.SchemaForm .btn-danger{
+    color: #fff;
+    background-color: #bf5329;
+    border-color: #aa4a24;
+}
+
+.SchemaForm .btn-info{
+    color: #fff;
+    background-color: #3097D1;
+    border-color: #2a88bd;
+}
+
+
+
+.immigration-form fieldset legend,
+.immigration-form h1,
+.heading > div > label {
+    font-weight: bold;
+    color: #B94A48;
+    font-size: 16px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    border-bottom: 1px solid #e5e5e5;
+    width: 100%;
+}
+
+
+
+.lanugage-item > fieldset > legend{
+    color: black;
+    font-size: 14px;
+    border-bottom: none;
+}
+
+
+.educationItemsWrapper .array-item-add button{
+    width: 23em;
+}
+.educationItemsWrapper .array-item-add button:after{
+    content: " Add Another Education or Training Program ";
+}
+.workItemsWrapper .array-item-add button:after{
+    content: " Add Another Job ";
+}
+.relativeItemsWrapper .array-item-add button:after{
+    content: " Add Another Person";
+}
+.visitsItemsWrapper .array-item-add button:after{
+    content: " Add Another Stay";
+}
+.relativeChildItemsWrapper .array-item-add button{
+   width: 23em;
+}
+.relativeChildItemsWrapper .array-item-add button:after{
+    content: " Add Another Child/Grandchild"
+}
+
+.previousStaysItemsWrapper .array-item-add button:after{
+    content: " Add Visit"
+}
+
+.absenceItemsWrapper .array-item-add button:after{
+    content: " Add Absence"
+}
+
+
+/* @todo- detect language */
+/*.educationItemsWrapper .array-item-add button{
+    width: 28em;
+}
+.educationItemsWrapper .array-item-add button:after{
+    content: " Ajouter un autre programme d’études ou de formation";
+}
+.workItemsWrapper .array-item-add button:after{
+    content: " Ajouter un autre travail ";
+}
+.relativeItemsWrapper .array-item-add button:after{
+    content: " Ajouter une autre personne";
+}
+.visitsItemsWrapper .array-item-add button:after{
+    content: " Ajouter une autre séjour";
+}*/
+
+
+.educationItem > fieldset > legend,
+.workItem > fieldset > legend,
+.relativeItem > fieldset > legend,
+.visitItem > fieldset > legend,
+.relativeChildItem > fieldset > legend,
+.arrayItem > fieldset > legend
+{
+    display: none;
+}
+
+.educationItem, .workItem, .relativeItem, .visitItem, .relativeChildItem, .arrayItem  {
+    padding: 1.5em 1.5em 0em 1.5em;
+    border-radius: 5px;
+    border: 1px solid #3097D1;
+}
+
+.lanugage-item legend{
+    margin-bottom: 5px;
+}
+
+
+.privacy-notice{
+    font-size: 12px !important;
+    line-height: 15px !important;
+    color: #999999;
+}
+
+.privacy-notice b{
+    color: black;
+}
+
+
+.spouseBox{
+    background-color: #efefef;
+    padding: 2vmin;
+    border-radius: 5px;
+}
+
+.spouseBox fieldset legend {
+    border-bottom: 1px solid white;
+}
+
+.spouseBox .lanugage-item > fieldset > legend{
+    border-bottom: none;
+}
+
+
+.lang-row-label{
+    margin-top: 31px;
+}
+
+.hide-label-md .lang-row-label{
+    margin-top: 5px;
+}
+
+.hide-label-md .form-group label{
+    display: none;
+}
+
+.SchemaForm .form-inline {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+@media (max-width: 991px){
+
+    .SchemaForm .form-footer .form-footer-seal{
+        text-align: center;
+    }
+
+    .extendedHelpIcon i{
+        font-size: 130%
+    }
+
+    .array-item-remove{
+        line-height: 0.8em;
+    }
+
+    .short-column{
+        width: auto;
+    }
+
+    .small-field input,
+    .small-field select{
+        min-width: 170px;
+    }
+
+    .lang-row-label{
+        margin-top: 5px;
+    }
+
+    .hide-label-md .lang-row-label{
+        margin-top: 5px;
+    }
+
+    .hide-label-md .form-group label{
+        display: block;
+    }
+}
+
+
+
+@media (max-width: 991px) {
+    h1{
+        font-size: 20px;
+    }
+
+    .t3-mainbody {
+        margin-top: 50px;
+    }
+
+    .immigration-option-box {
+        min-height: 0;
+    }
+
+    .immigration-option-box .top-bar {
+        min-height: 3.7em;
+    }
+
+    .immigration-option-box .img-wrapper {
+        display: inline-block;
+        line-height: 2em;
+        padding: 3px;
+        width: 45px;
+    }
+
+    .immigration-option-box .title {
+        font-size: 1em;
+    }
+
+    .immigration-option-box img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .immigration-option-box .caption {
+        min-height: 0;
+        padding-bottom: 0;
+        padding: 4px;
+    }
+
+    .immigration-option-box .caption h4 {
+        min-height: 0;
+    }
+
+    .immigration-option-box .caption p {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+.funkyradio h1{
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.funkyradio div {
+    /*clear: both;*/
+    overflow: hidden;
+}
+
+.funkyradio label {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #D1D3D4;
+    font-weight: normal;
+}
+
+
+
+.funkyradio input[type="radio"]:empty,
+.funkyradio input[type="checkbox"]:empty {
+    display: none;
+}
+
+.funkyradio input[type="radio"]:empty ~ label,
+.funkyradio input[type="checkbox"]:empty ~ label {
+    position: relative;
+    /*line-height: 2.5em;*/
+    /*text-indent: 3.25em;*/
+    padding-left: 3.25em;
+    margin-top: 1em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.funkyradio .has-link{
+    cursor: pointer;
+}
+
+.funkyradio input[type="radio"]:empty ~ label:before,
+.funkyradio input[type="checkbox"]:empty ~ label:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 2.5em;
+    background: #D1D3D4;
+    border-radius: 3px 0 0 3px;
+}
+
+.funkyradio input[type="radio"]:hover:not(:checked) ~ label,
+.funkyradio input[type="checkbox"]:hover:not(:checked) ~ label {
+    color: black;
+}
+
+.funkyradio input[type="radio"]:hover:not(:checked) ~ label:before,
+.funkyradio input[type="checkbox"]:hover:not(:checked) ~ label:before {
+    content: '\2714';
+    text-indent: .9em;
+    color: #C2C2C2;
+}
+
+.funkyradio input[type="radio"]:checked ~ label,
+.funkyradio input[type="checkbox"]:checked ~ label {
+    color: black;
+}
+
+.funkyradio input[type="radio"]:checked ~ label:before,
+.funkyradio input[type="checkbox"]:checked ~ label:before {
+    content: '\2714';
+    text-indent: .9em;
+    color: #333;
+    background-color: #ccc;
+}
+
+.funkyradio input[type="radio"]:focus ~ label:before,
+.funkyradio input[type="checkbox"]:focus ~ label:before {
+    box-shadow: 0 0 0 3px #999;
+}
+
+.funkyradio-default input[type="radio"]:checked ~ label:before,
+.funkyradio-default input[type="checkbox"]:checked ~ label:before {
+    color: #333;
+    background-color: #ccc;
+}
+
+.funkyradio-primary input[type="radio"]:checked ~ label:before,
+.funkyradio-primary input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #337ab7;
+}
+
+.funkyradio-success input[type="radio"]:checked ~ label:before,
+.funkyradio-success input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #5cb85c;
+}
+
+.funkyradio-danger input[type="radio"]:checked ~ label:before,
+.funkyradio-danger input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #d9534f;
+}
+
+.funkyradio-warning input[type="radio"]:checked ~ label:before,
+.funkyradio-warning input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #f0ad4e;
+}
+
+
+.funkyradio label span{
+    font-size: 0.9em;
+    line-height: 1.45em;
+    display: block;
+    padding-bottom: 3px;
+}
+
+.funkyradio-info input[type="radio"]:checked ~ label:before,
+.funkyradio-info input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #5bc0de;
+}
+
+
+
+
+.funkyradio .funkyradio-general-immigration input[type="radio"]:hover ~ label:before,
+.funkyradio .funkyradio-general-immigration input[type="checkbox"]:hover ~ label:before {
+    background-image: url(/modules/canada-visa-module/img/thumbnail_canada.png);
+    text-indent: 0.9em;
+    background-repeat: no-repeat;
+    background-size: 2em;
+    content: "";
+    background-position: 3px 5px;
+    color: #c9302c;
+}
+.funkyradio .funkyradio-general-immigration input[type="radio"] ~ label:before,
+.funkyradio .funkyradio-general-immigration input[type="checkbox"] ~ label:before {
+    background-image: url(/modules/canada-visa-module/img/thumbnail_canada.png);
+    text-indent: 0.9em;
+    background-repeat: no-repeat;
+    background-size: 2em;
+    content: "";
+    background-position: 3px 5px;
+}
+.funkyradio-general-immigration input[type="radio"]:checked ~ label:before,
+.funkyradio-general-immigration input[type="radio"]:hover ~ label:before,
+.funkyradio-general-immigration input[type="checkbox"]:checked ~ label:before,
+.funkyradio-general-immigration input[type="checkbox"]:hover ~ label:before{
+    color: #fff;
+    background-color: #c9302c;
+}
+.funkyradio-general-immigration:hover label{
+    border-color: #c9302c;
+}
+/*.funkyradio .funkyradio-general-immigration input[type="radio"]:empty ~ label:before,
+.funkyradio .funkyradio-general-immigration input[type="checkbox"]:empty ~ label:before{
+    background-color: #c9302c;
+}*/
+
+
+
+.funkyradio .funkyradio-sponsorship input[type="radio"]:hover ~ label:before,
+.funkyradio .funkyradio-sponsorship input[type="checkbox"]:hover ~ label:before {
+    background-image: url(/modules/canada-visa-module/img/thumbnail_family.png);
+    text-indent: 0.9em;
+    background-repeat: no-repeat;
+    background-size: 2em;
+    content: "";
+    background-position: 3px 5px;
+    color: #006699;
+}
+.funkyradio .funkyradio-sponsorship input[type="radio"] ~ label:before,
+.funkyradio .funkyradio-sponsorship input[type="checkbox"] ~ label:before {
+    background-image: url(/modules/canada-visa-module/img/thumbnail_family.png);
+    text-indent: 0.9em;
+    background-repeat: no-repeat;
+    background-size: 2em;
+    content: "";
+    background-position: 3px 5px;
+}
+.funkyradio-sponsorship input[type="radio"]:checked ~ label:before,
+.funkyradio-sponsorship input[type="radio"]:hover ~ label:before,
+.funkyradio-sponsorship input[type="checkbox"]:checked ~ label:before,
+.funkyradio-sponsorship input[type="checkbox"]:hover ~ label:before{
+    color: #fff;
+    background-color: #006699;
+}
+.funkyradio-sponsorship:hover label{
+    border-color: #006699;
+}
+/*.funkyradio .funkyradio-sponsorship input[type="radio"]:empty ~ label:before,
+.funkyradio .funkyradio-sponsorship input[type="checkbox"]:empty ~ label:before{
+    background-color: #006699;
+}*/
+
+
+
+
+
+.funkyradio .funkyradio-business input[type="radio"]:hover ~ label:before,
+.funkyradio .funkyradio-business input[type="checkbox"]:hover ~ label:before {
+    background-image: url(/modules/canada-visa-module/img/thumbnail_business.png);
+    text-indent: 0.9em;
+    background-repeat: no-repeat;
+    background-size: 2.2em;
+    content: "";
+    background-position: 2px 10px;
+    color: #669933;
+}
+.funkyradio .funkyradio-business input[type="radio"] ~ label:before,
+.funkyradio .funkyradio-business input[type="checkbox"] ~ label:before {
+    background-image: url(/modules/canada-visa-module/img/thumbnail_business.png);
+    text-indent: 0.9em;
+    background-repeat: no-repeat;
+    background-size: 2.2em;
+    content: "";
+    background-position: 2px 10px;
+}
+.funkyradio-business input[type="radio"]:checked ~ label:before,
+.funkyradio-business input[type="radio"]:hover ~ label:before,
+.funkyradio-business input[type="checkbox"]:checked ~ label:before,
+.funkyradio-business input[type="checkbox"]:hover ~ label:before{
+    color: #fff;
+    background-color: #669933;
+}
+.funkyradio-business:hover label{
+    border-color: #669933;
+}
+/*.funkyradio .funkyradio-business input[type="radio"]:empty ~ label:before,
+.funkyradio .funkyradio-business input[type="checkbox"]:empty ~ label:before{
+    background-color: #669933;
+}*/
+
+
+
+.funkyradio input[type="radio"]:not(:checked) ~ label,
+.funkyradio input[type="checkbox"]:not(:checked) ~ label {
+    color: black;
+}
+.funkyradio input[type="radio"]:checked ~ label,
+.funkyradio input[type="checkbox"]:checked ~ label {
+    color: black;
+}
+
+.funkyradio div.no-border label{
+    border-top: none;
+    border-bottom: none;
+    border-radius: 3px 0px 0px 3px;
+}
+
+@media (max-width: 991px){
+    .funkyradio label {
+        line-height: 22px !important;
+        padding-top: 3px;
+    }
+
+    .funkyradio div.no-border label{
+        border: none;
+    }
+
+    h3{
+        font-size: 14px;
+    }
+}

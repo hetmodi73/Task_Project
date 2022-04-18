@@ -15,22 +15,58 @@
   <link rel="stylesheet" href="{% static 'plugins/icheck-bootstrap/icheck-bootstrap.min.css'%}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css'%}">
+
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static 'images_login/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor_login/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts_login/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts_login/iconic/css/material-design-iconic-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor_login/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor_login/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor_login/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor_login/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor_login/daterangepicker/daterangepicker.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css_login/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css_login/main.css' %}">
+<!--===============================================================================================-->
+
 </head>
+
 <body class="hold-transition login-page">
+
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url({% static 'images_login/bg-01.jpg'%});">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+				<form method="post" class="login100-form validate-form">
+                    {% csrf_token %}
+
+					<span class="login100-form-title p-b-49">
+						You Are Successfully Logged Out!!!
+					</span>
+
 <div class="login-box">
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="{% static 'class=h1 '%}">
-          <h3> VISA CONSULTANT </h3>
-      </a>
-    </div>
     <div class="card-body">
 
-     <h2> You Are Successfully Logged Out!!! </h2>
-        <hr/>
-        <h6 align="center"><a href="{%  url 'login' %}"> Click here to Login </a></h6>
-
+        <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+                <div class="login100-form-bgbtn"></div>
+                <button class="login100-form-btn">
+                <h6 align="center"><a href="{%  url 'login' %}"> Click here to Login </a></h6>
+                </button>
+            </div>
+        </div>
 
     </div>
     <!-- /.card-body -->
@@ -38,6 +74,15 @@
   <!-- /.card -->
 </div>
 <!-- /.login-box -->
+</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="dropDownSelect1"></div>
+
+
 
 <!-- jQuery -->
 <script src="{% static 'plugins/jquery/jquery.min.js'%}"></script>
@@ -45,6 +90,26 @@
 <script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
 <!-- AdminLTE App -->
 <script src="{% static 'dist/js/adminlte.min.js'%}"></script>
+
+
+<!--===============================================================================================-->
+	<script src="{% static 'vendor_login/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor_login/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor_login/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'vendor_login/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor_login/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor_login/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'vendor_login/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor_login/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'js_login/main.js' %}"></script>
+
 </body>
+
 </html>
 
