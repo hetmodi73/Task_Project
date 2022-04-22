@@ -1,10 +1,310 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% load static %}
+{% block css %}
 
-</body>
-</html>
+      <!-- bootstrap.min css -->
+      <link rel="stylesheet" href="{% static 'plugins/bootstrap/css/bootstrap.min.css' %}">
+      <!-- Icon Font Css -->
+      <link rel="stylesheet" href="{% static 'plugins/themify/css/themify-icons.css' %}">
+      <link rel="stylesheet" href="{% static 'plugins/fontawesome/css/all.css' %}">
+      <link rel="stylesheet" href="{% static 'plugins/magnific-popup/dist/magnific-popup.css' %}">
+      <!-- Owl Carousel CSS -->
+      <link rel="stylesheet" href="{% static 'plugins/slick-carousel/slick/slick.css' %}">
+      <link rel="stylesheet" href="{% static 'plugins/slick-carousel/slick/slick-theme.css' %}">
+
+      <!-- Main Stylesheet -->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+{% endblock %}
+
+{% block body %}
+
+<!-- Header Start -->
+
+<header class="navigation">
+	<div class="header-top ">
+		<div class="container">
+			<div class="row justify-content-between align-items-center">
+				<div class="col-lg-2 col-md-4">
+					<div class="header-top-socials text-center text-lg-left text-md-left">
+						<a href="https://www.facebook.com/themefisher" target="_blank"><i class="ti-facebook"></i></a>
+						<a href="https://twitter.com/themefisher" target="_blank"><i class="ti-twitter"></i></a>
+						<a href="https://github.com/themefisher/" target="_blank"><i class="ti-github"></i></a>
+					</div>
+				</div>
+				<div class="col-lg-10 col-md-8 text-center text-lg-right text-md-right">
+					<div class="header-top-info">
+						<a href="tel:+23-345-67890">Call Us : <span>+23-345-67890</span></a>
+						<a href="mailto:support@gmail.com" ><i class="fa fa-envelope mr-2"></i><span>support@gmail.com</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav class="navbar navbar-expand-lg  py-4" id="navbar">
+		<div class="container">
+		  <a class="navbar-brand" href="{% url 'index' %}">
+		  	VISA<span>CONSULTANT</span>
+		  </a>
+
+		  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="fa fa-bars"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse text-center" id="navbarsExample09">
+			<ul class="navbar-nav ml-auto">
+			  <li class="nav-item active">
+				<a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+			  </li>
+			  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="{% url 'about' %}" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+					<ul class="dropdown-menu" aria-labelledby="dropdown03">
+						<li><a class="dropdown-item" href="{% url 'about' %}">Our company</a></li>
+						<li><a class="dropdown-item" href="{% url 'pricing' %}">Pricing</a></li>
+					</ul>
+			  </li>
+
+			   <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="{% url 'service' %}" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+					<ul class="dropdown-menu" aria-labelledby="dropdown05">
+						<li><a class="dropdown-item" href="{% url 'service' %}">Services</a></li>
+						<li><a class="dropdown-item" href="{% url 'service_details_form' %}">Service Details</a></li>
+					</ul>
+			  </li>
+
+			   <li class="nav-item"><a class="nav-link" href="{% url 'project' %}">Portfolio</a></li>
+			   <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="{% url 'blog_grid' %}" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
+					<ul class="dropdown-menu" aria-labelledby="dropdown05">
+						<li><a class="dropdown-item" href="{% url 'blog_grid' %}">Blog Grid</a></li>
+						<li><a class="dropdown-item" href="{% url 'blog_sidebar' %}">Blog with Sidebar</a></li>
+
+						<li><a class="dropdown-item" href="{% url 'blog_single' %}">Blog Single</a></li>
+					</ul>
+			  </li>
+			   <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+			   <li class="nav-item"><a class="nav-link" href="{% url 'feedback' %}">Feedback</a></li>
+			</ul>
+
+			<form class="form-lg-inline my-2 my-md-0 ml-lg-4 text-center">
+			  <a href="{% url 'logout' %}" class="btn btn-solid-border btn-round-full">Logout</a>
+			</form>
+		  </div>
+		</div>
+	</nav>
+</header>
+
+<!-- Header Close -->
+
+    <br></br>
+    <h1 align="center"> DETAILS OF STUDENT VISA APPLICATION </h1>
+    <hr/>
+
+    <form method="post">
+        {% csrf_token %}
+
+         <div align="center">
+            <div class="col-md-6" align="left">
+            <div class="card card-primary card-outline" class="col-md-4">
+              <div class="card-body box-profile">
+
+                <ul class="list-group list-group-unbordered mb-3" >
+
+                    <li class="list-group-item">
+                    <b> AGE: </b> <a class="float-right">{{ object.root_age }}</a>
+                    </li>
+
+                     <li class="list-group-item">
+                     <b> EDUCATION LEVEL: </b> <a class="float-right">{{ object.root_education_level }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> STUDIED IN CANADA: </b> <a class="float-right">{{ object.root_studied_in_canada }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> ENGLISH READING: </b> <a class="float-right">{{ object.root_english_reading }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> ENGLISH SPEAKING: </b> <a class="float-right">{{ object.root_english_speaking }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> ENGLISH LISTENING: </b> <a class="float-right">{{ object.root_english_listening }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> ENGLISH WRITING: </b> <a class="float-right">{{ object.root_english_writing }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> FRENCH READING: </b> <a class="float-right">{{ object.root_french_reading }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> FRENCH SPEAKING: </b> <a class="float-right">{{ object.root_french_speaking }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> FRENCH LISTENING: </b> <a class="float-right">{{ object.root_french_listening }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> FRENCH WRITING: </b> <a class="float-right">{{ object.root_french_writing }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> FOREIGN SKILLED WORK YEARS: </b> <a class="float-right">{{ object.root_work_foreign_skilled_work_years }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> CANADIAN SKILLED WORK YEARS: </b> <a class="float-right">{{ object.root_work_canadian_skilled_work_years }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> MARATIAL STATUS: </b> <a class="float-right">{{ object.root_maratial_status }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> SPOUSE SIBLINGS: </b> <a class="float-right">{{ object.root_spouse_siblings }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> TRADE CERTIFICATE: </b> <a class="float-right">{{ object.root_trades_certificate }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> NOMINATION CERTIFICATE: </b> <a class="float-right">{{ object.root_nomination_certificate }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> SKILLED JOB OFFER: </b> <a class="float-right">{{ object.root_skilled_job_offer }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> NAME: </b> <a class="float-right">{{ object.client }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> EMAIL: </b> <a class="float-right">{{ object.root_contact_details_email }}</a>
+                     </li>
+
+                     <li class="list-group-item">
+                     <b> CONTACT NUMBER: </b> <a class="float-right">{{ object.root_contact_details_telephone }}</a>
+                     </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+
+    </div>
+             <div align="center">
+                 <a href="{% url 'canada-view' %}" class="btn btn-info"><b>Back</b></a>
+            </div>
+
+    </div>
+
+    </form>
+
+<!-- footer Start -->
+<footer class="footer section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<div class="widget">
+					<h4 class="text-capitalize mb-4">Company</h4>
+
+					<ul class="list-unstyled footer-menu lh-35">
+						<li><a href="#">Terms & Conditions</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Support</a></li>
+						<li><a href="#">FAQ</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-6 col-sm-6">
+				<div class="widget">
+					<h4 class="text-capitalize mb-4">Quick Links</h4>
+
+					<ul class="list-unstyled footer-menu lh-35">
+						<li><a href="{% url 'about' %}">About</a></li>
+						<li><a href="{% url 'service' %}">Services</a></li>
+						<li><a href="{% url 'about' %}">Team</a></li>
+						<li><a href="{% url 'contact' %}">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<div class="widget">
+					<h4 class="text-capitalize mb-4">Subscribe Us</h4>
+					<p>Subscribe to get latest news article and resources  </p>
+
+					<form action="#" class="sub-form">
+						<input type="text" class="form-control mb-3" placeholder="Subscribe Now ...">
+						<a href="#" class="btn btn-main btn-small">subscribe</a>
+					</form>
+				</div>
+			</div>
+
+			<div class="col-lg-3 ml-auto col-sm-6">
+				<div class="widget">
+					<div class="logo mb-4">
+						<h3>VISA<span>CONSULTANT</span></h3>
+					</div>
+					<h6><a href="tel:+23-345-67890" >Support@megakit.com</a></h6>
+					<a href="mailto:support@gmail.com"><span class="text-color h4">+23-456-6588</span></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer-btm pt-4">
+			<div class="row">
+				<div class="col-lg-6">
+{#					<div class="copyright">#}
+{#						&copy; Copyright Reserved to <span class="text-color">Megakit.</span> by <a href="https://themefisher.com/" target="_blank">Themefisher</a>#}
+{#					</div>#}
+				</div>
+				<div class="col-lg-6 text-left text-lg-right">
+					<ul class="list-inline footer-socials">
+						<li class="list-inline-item"><a href="https://www.facebook.com/themefisher"><i class="ti-facebook mr-2"></i>Facebook</a></li>
+						<li class="list-inline-item"><a href="https://twitter.com/themefisher"><i class="ti-twitter mr-2"></i>Twitter</a></li>
+						<li class="list-inline-item"><a href="https://www.pinterest.com/themefisher/"><i class="ti-linkedin mr-2 "></i>Linkedin</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+{% endblock %}
+
+{% block js %}
+
+    <!--
+    Essential Scripts
+    =====================================-->
+
+
+    <!-- Main jQuery -->
+    <script src="{% static 'plugins/jquery/jquery.js' %}"></script>
+    <script src="{% static 'js/contact.js' %}"></script>
+    <!-- Bootstrap 4.3.1 -->
+    <script src="{% static 'plugins/bootstrap/js/popper.js' %}"></script>
+    <script src="{% static 'plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+   <!--  Magnific Popup-->
+    <script src="{% static 'plugins/magnific-popup/dist/jquery.magnific-popup.min.js' %}"></script>
+    <!-- Slick Slider -->
+    <script src="{% static 'plugins/slick-carousel/slick/slick.min.js' %}"></script>
+    <!-- Counterup -->
+    <script src="{% static 'plugins/counterup/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'plugins/counterup/jquery.counterup.min.js' %}"></script>
+
+    <!-- Google Map -->
+    <script src="{% static 'plugins/google-map/map.js' %}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+{% endblock %}

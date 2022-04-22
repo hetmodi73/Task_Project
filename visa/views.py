@@ -27,9 +27,8 @@ class UpdateCanadaView(UpdateView):
 class DetailCanadaView(DetailView):
     model = canada
     fields = '__all__'
-    success_url = '/Feedback/view'
+    success_url = '/visa/view'
 
 class DeleteCanadaView(DeleteView):
     model = canada
-    success_url = '/Feedback/view'
-
+    success_url = '/visa/view'

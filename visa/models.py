@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from client.urls import user
 # Create your models here.
 
 class canada(models.Model):
@@ -188,13 +189,13 @@ class canada(models.Model):
         ('NO', 'NO')
     )
     root_skilled_job_offer=models.CharField(max_length=100, choices=choice18)
-    root_contact_details_residence_country=models.CharField(max_length=100, blank=True,null=True)
-    root_contact_details_name=models.CharField(max_length=100, blank=True,null=True)
+    # root_contact_details_residence_country=models.CharField(max_length=100, blank=True,null=True)
+    client=models.ForeignKey(user,on_delete=models.CASCADE, related_name='canada', blank=True,null=True)
     root_contact_details_email=models.EmailField(max_length=100, blank=True,null=True)
     root_contact_details_telephone=models.IntegerField(blank=True,null=True)
 
     def __str__(self):
-        return f"{self.root_age}"
+        return f"{self.client}"
 
     def get_absolute_url(self):
         return reverse('canada-view')

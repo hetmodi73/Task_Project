@@ -30,7 +30,9 @@ urlpatterns = [
     path("Feedback/",include("Feedback.urls")),
     path("portfolio/",include("portfolio.urls")),
     path("blog/", include("blog.urls")),
-    path("visa/",include("visa.urls"))
+    path("visa/",include("visa.urls")),
+    path("pr/", include("pr.urls")),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

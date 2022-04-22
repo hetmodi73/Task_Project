@@ -47,25 +47,28 @@
 			<div class="row justify-content-between align-items-center">
 				<div class="col-lg-2 col-md-4">
 					<div class="header-top-socials text-center text-lg-left text-md-left">
-						<a href="https://www.facebook.com/themefisher" target="_blank"><i class="ti-facebook"></i></a>
-						<a href="https://twitter.com/themefisher" target="_blank"><i class="ti-twitter"></i></a>
-						<a href="https://github.com/themefisher/" target="_blank"><i class="ti-github"></i></a>
+                        <div>
+                          <a class="navbar-brand" href="{% url 'index' %}">
+                            <span>
+                                <h3 STYLE="color: red">VISA CONSULTANT</h3>
+                            </span>
+                          </a>
+                        </div>
+
 					</div>
 				</div>
 				<div class="col-lg-10 col-md-8 text-center text-lg-right text-md-right">
 					<div class="header-top-info">
-						<a href="tel:+23-345-67890">Call Us : <span>+23-345-67890</span></a>
-						<a href="mailto:support@gmail.com" ><i class="fa fa-envelope mr-2"></i><span>support@gmail.com</span></a>
+						<a href="tel:+23-345-67890" class="navbar-brand" style="color: red">Call Us : <span>+23-345-67890</span></a>
+						<a href="mailto:support@gmail.com" class="navbar-brand" style="color: red"><i class="fa fa-envelope mr-2"></i><span>support@gmail.com</span></a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<nav class="navbar navbar-expand-lg  py-4" id="navbar">
 		<div class="container">
-		  <a class="navbar-brand" href="{% url 'index' %}">
-		  	VISA<span>CONSULTANT</span>
-		  </a>
 
 		  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="fa fa-bars"></span>
@@ -89,6 +92,14 @@
 					<ul class="dropdown-menu" aria-labelledby="dropdown05">
 						<li><a class="dropdown-item" href="{% url 'service' %}">Services</a></li>
 						<li><a class="dropdown-item" href="{% url 'service_details_form' %}">Service Details</a></li>
+					</ul>
+			  </li>
+
+			   <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="{% url 'canada_form' %}" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Visa Application</a>
+					<ul class="dropdown-menu" aria-labelledby="dropdown05">
+						<li><a class="dropdown-item" href="{% url 'canada_form' %}">Student Visa</a></li>
+						<li><a class="dropdown-item" href="{% url 'canada_pr_form' %}">permanant Residence</a></li>
 					</ul>
 			  </li>
 
